@@ -4,7 +4,7 @@ html,
 body {
   margin: 0%;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 :root {
@@ -16,7 +16,7 @@ body {
   --midnight: #104f55;
 
   /* gradient color */
-  --sky: linear-gradient(120deg, #a1c4fd 0% #c2e9fb 100%);
+  --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
 
   /*  theme font-family */
   --Abel: "Abel", cursive;
@@ -39,7 +39,36 @@ a {
 ul {
   list-style-type: none;
 }
-/* ...........Global Classes............... */
+
+h1 {
+  font-family: var(--Abel);
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-family: var(--Abel);
+  font-size: 1.3rem;
+}
+
+h3 {
+  font-family: var(--Poppins);
+  font-size: 1.3rem;
+}
+
+button.btn {
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 3rem;
+  font-size: 1rem;
+  font-family: var(--Roboto);
+  cursor: pointer;
+}
+
+span{
+  font-family: var(--Abel);
+}
+
+/* ........x...Global Classes.........x...... */
 
 /* ...........Navigation styles.............. */
 .nav {
@@ -95,36 +124,106 @@ ul {
   color: #a1c4cf;
 }
 
-.collapse{
-    height: 35rem ;
+.collapse {
+  height: 35rem;
 }
 
 .nav .toggle-collapse {
-    position: absolute;
-    top: 0%;
-    width: 90%;
-    cursor: pointer;
-    display: none;
+  position: absolute;
+  top: 0%;
+  width: 90%;
+  cursor: pointer;
+  display: none;
 }
-.nav .toggle-collapse .toggle-icons{
-    display: flex;
-    justify-content: flex-end;
-    padding: 1.7rem 0;
-}
-
 .nav .toggle-collapse .toggle-icons {
-
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.7rem 0;
 }
+
+/* ------------x------------Navbar section------------x-------------- */
+
+/* -----------------------Main section--------------------------- */
+
+/* -----------------------Site title--------------------------- */
+main .site-title {
+  background: url("../assets/Background-image.png");
+  background-size: cover;
+  height: 110vh;
+  display: flex;
+  justify-content: center;
+}
+
+main .site-title .site-background {
+  padding-top: 10rem;
+  text-align: center;
+  color: var(--white);
+}
+
+main .site-title h1,
+h3 {
+  margin: 0.3rem;
+}
+
+main .site-title .btn {
+  margin: 1.8rem;
+  background: var(--sky);
+}
+
+main .site-title .btn:hover {
+  background: transparent;
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+
+/* -----------------x----  Site title-------------x-------------- */
+/* ---------------------  Blog Carousel--------------------------- */
+
+main .blog {
+  background: url("../assets/Abract01.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 100vh;
+  width: 100%;
+  background-size: 65%;
+}
+
+main .blog-post .blog-content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 80%;
+  margin: 3rem 2rem;
+  box-shadow: 0 15px 20px rgb(0, 0, 0, 0.2);
+}
+
+main .blog-content .blog-title {
+  padding: 2rem 0;
+}
+
+main .blog-content .btn-blog {
+  padding: .7rem 2rem ;
+  background: var(--sky);
+  margin: .5rem;
+}
+
+main .blog-content span{
+  display: block;
+}
+/* -----------------x----  Blog Carousel-------------x-------------- */
+
+/* ------------x------------Main section------------x--------------- */
 
 /*   Viewport less than or equal to 750px */
-@media only screen and (max-width:750px){
-    .nav .nav-menu, .nav .nav-items{
-        flex-direction: column;
-    }
+@media only screen and (max-width: 750px) {
+  .nav .nav-menu,
+  .nav .nav-items {
+    flex-direction: column;
+  }
 
-    .nav .toggle-collapse{
-        display: initial;
-    }
+  .nav .toggle-collapse {
+    display: initial;
+  }
 }
 
 /*   Viewport less than or equal to 750px */
